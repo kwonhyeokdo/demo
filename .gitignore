@@ -34,4 +34,5 @@ out/
 /.nb-gradle/
 
 ### VS Code ###
-.vscode/
+# launch.json과 setting.json을 포함해야 하므로 .vscode제외
+# .vscode/

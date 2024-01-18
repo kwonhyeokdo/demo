@@ -1,4 +1,9 @@
 spring:
+    devtools:
+        livereload:
+            enabled: true
+        restart:
+            enabled: true
     datasource:
         url: jdbc:mysql://localhost:3306/jpashop?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
         driverClassName: com.mysql.cj.jdbc.Driver
