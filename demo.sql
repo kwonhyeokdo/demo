@@ -1,0 +1,2 @@
+CREATE DATABASE jpashop;
+DROP DATABASE jpabook;
