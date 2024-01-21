@@ -28,3 +28,12 @@ spring:
 logging.level:
     "[org.hibernate.SQL]": debug
     # "[org.hibernate.type]": trace
+
+cors:
+    allowedOrigins: http://localhost:3000
+    allowedMethods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+    # '>'는 escape용도
+    allowedHeaders: >
+                      *
+    allowedCredentials: true
+    maxAge: 3600
