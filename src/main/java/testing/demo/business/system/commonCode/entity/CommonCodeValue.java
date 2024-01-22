@@ -1,4 +1,4 @@
-package testing.demo.buiness.system.commonCode.entity;
+package testing.demo.business.system.commonCode.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

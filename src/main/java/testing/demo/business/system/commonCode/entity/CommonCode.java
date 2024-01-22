@@ -1,4 +1,4 @@
-package testing.demo.buiness.system.language.entity;
+package testing.demo.business.system.commonCode.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,29 +7,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import testing.demo.buiness.jpa.EitherBooleanOrYnConverter;
 
 import java.util.List;
 import java.util.ArrayList;
 
 @Entity
-@Table(name = "language_key")
+@Table(name = "common_code")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class LanguageKey {
+public class CommonCode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "language_key_id")
+    @Column(name = "common_code_id")
     private Long id;
 
-    @Column(name = "language_key", unique = true, length = 50)
-    private String key;
+    @Column(name = "common_code", unique = true, length = 50)
+    @Size(max = 50)
+    private String code;
 
-    @Column(name = "can_use", nullable = false, length = 1)
-    @EitherBooleanOrYnConverter
-    private String canUse;
-
-    @OneToMany(mappedBy = "languageKey")
-    private List<LanguageValue> values = new ArrayList<>();
+    @OneToMany(mappedBy = "code")
+    private List<CommonCodeKey> keys = new ArrayList<>();
 }

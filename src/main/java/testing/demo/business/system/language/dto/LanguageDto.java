@@ -1,4 +1,4 @@
-package testing.demo.buiness.system.language.dto;
+package testing.demo.business.system.language.dto;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package testing.demo.buiness.jpa;
+package testing.demo.business.businessCustomJpa;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Convert;

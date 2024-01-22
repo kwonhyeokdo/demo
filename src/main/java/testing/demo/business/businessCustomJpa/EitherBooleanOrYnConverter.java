@@ -1,4 +1,4 @@
-package testing.demo.buiness.jpa;
+package testing.demo.business.businessCustomJpa;
 
 import jakarta.persistence.Convert;
 
@@ -8,5 +8,4 @@ import jakarta.persistence.Convert;
  */
 @Convert(converter = EitherBooleanOrConverterImpl.class)
 public @interface EitherBooleanOrYnConverter {
-    
 }

@@ -3,5 +3,6 @@
     // devtools 기능이 작동하기 위해 off해야함, vscode-gradle의 버그
     // https://github.com/redhat-developer/vscode-java/issues/3392
     // https://github.com/microsoft/vscode-java-debug/issues/1402
-    "java.gradle.buildServer.enabled": "off"
+    "java.gradle.buildServer.enabled": "off",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
