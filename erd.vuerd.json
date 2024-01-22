@@ -3,8 +3,8 @@
     "version": "2.2.12",
     "width": 3000,
     "height": 3000,
-    "scrollTop": -90,
-    "scrollLeft": 0,
+    "scrollTop": -778,
+    "scrollLeft": -574,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -144,7 +144,7 @@
           "active": false,
           "left": 1399,
           "top": 102,
-          "zIndex": 117,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 70.61181640625
         },
@@ -298,7 +298,7 @@
           "active": false,
           "left": 2084,
           "top": 84,
-          "zIndex": 48,
+          "zIndex": 3,
           "widthName": 85.83984375,
           "widthComment": 100.2236328125
         },
@@ -429,7 +429,7 @@
           "active": false,
           "left": 693,
           "top": 85,
-          "zIndex": 44,
+          "zIndex": 1,
           "widthName": 93.05078125,
           "widthComment": 100.2236328125
         },
@@ -514,7 +514,7 @@
           "active": false,
           "left": 1454,
           "top": 461,
-          "zIndex": 120,
+          "zIndex": 7,
           "widthName": 72.8271484375,
           "widthComment": 70.61181640625
         },
@@ -645,7 +645,7 @@
           "active": false,
           "left": 689,
           "top": 426,
-          "zIndex": 45,
+          "zIndex": 2,
           "widthName": 118.34619140625,
           "widthComment": 100.2236328125
         },
@@ -707,7 +707,7 @@
           "active": false,
           "left": 0,
           "top": 246,
-          "zIndex": 51,
+          "zIndex": 4,
           "widthName": 173.2724609375,
           "widthComment": 120
         },
@@ -769,106 +769,21 @@
           "active": false,
           "left": 1521,
           "top": 710,
-          "zIndex": 58,
+          "zIndex": 5,
           "widthName": 114.02978515625,
           "widthComment": 113.2236328125
         },
         "visible": true
       },
       {
-        "id": "1ad7f3a6-d329-4260-b290-0a0c5b8cc047",
-        "name": "country",
-        "comment": "국가 테이블",
-        "columns": [
-          {
-            "id": "5c76dc92-040c-4668-b3c0-7fa39dc49609",
-            "name": "country_id",
-            "comment": "(PK) 국가 식별키",
-            "dataType": "BIGINT",
-            "default": "AUTOINCREMENT",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 61.97900390625,
-              "widthComment": 100.2236328125,
-              "widthDataType": 60,
-              "widthDefault": 115.1533203125
-            }
-          },
-          {
-            "id": "6f3ce7b3-feb6-44a8-808e-81cd00dec2fd",
-            "name": "country_code",
-            "comment": "(UK) 국가 코드",
-            "dataType": "VARCHAR(5)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 80.05078125,
-              "widthComment": 87.94091796875,
-              "widthDataType": 80.48876953125,
-              "widthDefault": 60
-            }
-          },
-          {
-            "id": "986eb48c-a3d5-486d-8bce-dfee4ca49c11",
-            "name": "country_language_id",
-            "comment": "(FK) 다국어 식별키",
-            "dataType": "VARCHAR",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 122.70703125,
-              "widthComment": 112.49365234375,
-              "widthDataType": 64.6005859375,
-              "widthDefault": 60
-            }
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 685,
-          "top": 742,
-          "zIndex": 138,
-          "widthName": 60,
-          "widthComment": 70.61181640625
-        },
-        "visible": true
-      },
-      {
         "id": "29fba0ca-37fe-4c93-be0c-64d53e66f7c2",
-        "name": "language_code_management",
-        "comment": "다국어 코드 관리 테이블",
+        "name": "language_value",
+        "comment": "다국어 값 테이블",
         "columns": [
           {
             "id": "93039c1b-899f-4f7f-ac21-8772e73bfcb4",
-            "name": "language_code_id",
-            "comment": "(PK) 다국어 코드 식별키",
+            "name": "language_value_id",
+            "comment": "(PK) 다국어 값 식별키",
             "dataType": "BIGINT",
             "default": "AUTOINCREMENT",
             "option": {
@@ -882,78 +797,16 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 108.26611328125,
+              "widthName": 111.154296875,
               "widthComment": 120,
               "widthDataType": 60,
               "widthDefault": 115.1533203125
             }
           },
           {
-            "id": "dde91973-5695-4cb3-9abe-85d8e0b3a676",
-            "name": "language_code",
-            "comment": "(UK) 다국어 코드",
-            "dataType": "VARCHAR(100)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 90.91796875,
-              "widthComment": 100.94091796875,
-              "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            }
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 682,
-          "top": 1079,
-          "zIndex": 95,
-          "widthName": 174.02783203125,
-          "widthComment": 120
-        },
-        "visible": true
-      },
-      {
-        "id": "96e0ffeb-7444-4a77-b5e1-abb2bfcce8ae",
-        "name": "country_history",
-        "comment": "국가 이력 테이블",
-        "columns": [
-          {
-            "id": "97bc99e0-5ee4-429f-8ac3-e4cbe7e5550a",
-            "name": "country_history_id",
-            "comment": "(PK) 국가 관리 이력 식별키",
-            "dataType": "BIGINT",
-            "default": "AUTOINCREMENT",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 107.498046875,
-              "widthComment": 120,
-              "widthDataType": 60,
-              "widthDefault": 115.1533203125
-            }
-          },
-          {
-            "id": "9dee31a5-9847-4aed-95e5-987b0491153d",
-            "name": "country_id",
-            "comment": "(FK) 국가 식별키",
+            "id": "592564e2-e72d-4ea8-9c9e-797b04285ced",
+            "name": "language_key_id",
+            "comment": "(FK)다국어 코드 식별키",
             "dataType": "BIGINT",
             "default": "",
             "option": {
@@ -967,17 +820,17 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 61.97900390625,
-              "widthComment": 99.49365234375,
+              "widthName": 100.30615234375,
+              "widthComment": 120,
               "widthDataType": 60,
               "widthDefault": 60
             }
           },
           {
-            "id": "bea5119c-26b7-480b-95fb-0e66db2c1b71",
-            "name": "history_content_id",
-            "comment": "",
-            "dataType": "BIGINT",
+            "id": "dde91973-5695-4cb3-9abe-85d8e0b3a676",
+            "name": "country_id",
+            "comment": "(CC) 국가코드 ID",
+            "dataType": "VARCHAR(5)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -990,20 +843,491 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 107.5107421875,
+              "widthName": 61.97900390625,
+              "widthComment": 101.658203125,
+              "widthDataType": 80.48876953125,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "6b2bf60f-5ca7-4066-a88a-3e48ac38ff02",
+            "name": "language_value",
+            "comment": "다국어 값",
+            "dataType": "VARCHAR(MAX)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93.80615234375,
               "widthComment": 60,
+              "widthDataType": 101.4296875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "ddc4714b-634a-4ca3-9cca-b325cf75080e",
+            "name": "can_use",
+            "comment": "사용여부(Y/N)",
+            "dataType": "VARCAHR(1)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 84.3291015625,
+              "widthDataType": 80.48876953125,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 720,
+          "top": 718,
+          "zIndex": 13,
+          "widthName": 93.80615234375,
+          "widthComment": 100.2236328125
+        },
+        "visible": true
+      },
+      {
+        "id": "c1d46829-4b39-4cee-9137-b625933b28ca",
+        "name": "common_code",
+        "comment": "공통코드 테이블",
+        "columns": [
+          {
+            "id": "13613cb8-34cf-4327-a928-2d7b51807159",
+            "name": "common_code_id",
+            "comment": "공통코드 식별키",
+            "dataType": "BIGINT",
+            "default": "AUTOINCREMENT",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 104.6162109375,
+              "widthComment": 96.61181640625,
+              "widthDataType": 60,
+              "widthDefault": 115.1533203125
+            }
+          },
+          {
+            "id": "3ab93075-32fe-43e6-852f-5a6d66cba466",
+            "name": "common_code",
+            "comment": "(UK) 공통코드",
+            "dataType": "varchar(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 87.26806640625,
+              "widthComment": 84.3291015625,
+              "widthDataType": 68.46630859375,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "be54d5e5-57ff-4148-8c8d-75805c866857",
+            "name": "common_code_scope_id",
+            "comment": "(PK) 공통 코드 범위 식별키",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 146.5361328125,
+              "widthComment": 120,
               "widthDataType": 60,
               "widthDefault": 60
             }
           }
         ],
         "ui": {
-          "active": true,
-          "left": 26,
-          "top": 741,
-          "zIndex": 156,
-          "widthName": 90.14990234375,
+          "active": false,
+          "left": 856,
+          "top": 927,
+          "zIndex": 12,
+          "widthName": 87.26806640625,
+          "widthComment": 96.61181640625
+        },
+        "visible": true
+      },
+      {
+        "id": "99f747ea-5075-480e-89e0-409ba92de7f0",
+        "name": "laguage_key",
+        "comment": "다국어 키 테이블",
+        "columns": [
+          {
+            "id": "6851bfab-8527-459c-beb0-dc8c0879ced2",
+            "name": "language_key_id",
+            "comment": "다국어 키 식별키",
+            "dataType": "BIGINT",
+            "default": "AUTOINCREMENT",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 100.30615234375,
+              "widthComment": 100.2236328125,
+              "widthDataType": 60,
+              "widthDefault": 115.1533203125
+            }
+          },
+          {
+            "id": "b2a4a21f-090e-4724-9438-2ef70ef383f2",
+            "name": "language_key",
+            "comment": "(UK) 다국어 키",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 82.9580078125,
+              "widthComment": 87.94091796875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "82be997e-34e0-48bd-9340-71df51c8b372",
+            "name": "can_use",
+            "comment": "사용여부(Y/N)",
+            "dataType": "VARCHAR(1)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 84.3291015625,
+              "widthDataType": 80.48876953125,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 62,
+          "top": 722,
+          "zIndex": 8,
+          "widthName": 75.72802734375,
           "widthComment": 100.2236328125
+        },
+        "visible": true
+      },
+      {
+        "id": "b16d4118-dfd6-4876-adff-48e4810b0647",
+        "name": "common_code_key",
+        "comment": "공통코드 키 테이블",
+        "columns": [
+          {
+            "id": "986510b8-b0d9-4369-bf7f-70203342b866",
+            "name": "common_code_key_id",
+            "comment": "공통코드 키 식별키",
+            "dataType": "BIGINT",
+            "default": "AUTOINCREMENT",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 132.076171875,
+              "widthComment": 113.2236328125,
+              "widthDataType": 60,
+              "widthDefault": 115.1533203125
+            }
+          },
+          {
+            "id": "0e63ba48-25f5-43db-a205-7e0f56dc0d08",
+            "name": "common_code_id",
+            "comment": "공통코드 식별키",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 104.6162109375,
+              "widthComment": 96.61181640625,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "7c46282a-0e7c-4ecf-8ea5-2ddac80dd146",
+            "name": "common_code_key",
+            "comment": "(UK) 공통코드 키",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 114.72802734375,
+              "widthComment": 100.94091796875,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 133,
+          "top": 1154,
+          "zIndex": 16,
+          "widthName": 114.72802734375,
+          "widthComment": 113.2236328125
+        },
+        "visible": true
+      },
+      {
+        "id": "6703b97e-9ade-4e51-a7a3-c7d82464a29b",
+        "name": "common_code_value",
+        "comment": "공통코드 값 테이블",
+        "columns": [
+          {
+            "id": "03c3317e-f8af-47ae-9695-814f0d1c8c96",
+            "name": "common_code_value_id",
+            "comment": "공통코드 값 식별키",
+            "dataType": "BIGINT",
+            "default": "AUTOINCREMENT",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 142.92431640625,
+              "widthComment": 113.2236328125,
+              "widthDataType": 60,
+              "widthDefault": 115.1533203125
+            }
+          },
+          {
+            "id": "8824e55f-6d5f-42eb-b047-abf5c4b6d2ef",
+            "name": "common_code_key_id",
+            "comment": "공통코드 키 식별키",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 132.076171875,
+              "widthComment": 113.2236328125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "724cf569-ac42-473a-b9a3-f58263d2b07c",
+            "name": "common_code_value",
+            "comment": "공통코드 값",
+            "dataType": "VARCHAR(MAX)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 125.576171875,
+              "widthComment": 70.61181640625,
+              "widthDataType": 101.4296875,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 813,
+          "top": 1150,
+          "zIndex": 18,
+          "widthName": 125.576171875,
+          "widthComment": 113.2236328125
+        },
+        "visible": true
+      },
+      {
+        "id": "dcd90fda-cd27-4bf5-b5c1-59a054ab9918",
+        "name": "common_code_scope",
+        "comment": "공통 코드 범위 테이블",
+        "columns": [
+          {
+            "id": "577e285f-4d6a-498f-99ff-981998bac1e7",
+            "name": "common_code_scope_id",
+            "comment": "(PK) 공통 코드 범위 식별키",
+            "dataType": "BIGINT",
+            "default": "AUTOINCREMENT",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 146.5361328125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 115.1533203125
+            }
+          },
+          {
+            "id": "e05175b4-c6c3-45ac-800b-84724a4597e8",
+            "name": "common_code_sope",
+            "comment": "(UK) 공통 코드 범위",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 122.68798828125,
+              "widthComment": 117.552734375,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "9bd502f3-131a-4713-895f-a6ab8827289f",
+            "name": "common_code_scope_parent_id",
+            "comment": "(PK) 공통 코드 범위 식별키 부모ID",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 190.626953125,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 100,
+          "top": 935,
+          "zIndex": 11,
+          "widthName": 129.18798828125,
+          "widthComment": 120
         },
         "visible": true
       }
@@ -1224,29 +1548,133 @@
         "visible": true
       },
       {
-        "id": "bddc18c1-1814-40fb-8f23-737bf17a3dc9",
+        "id": "5091e333-e5ee-4c4e-84b1-f08e5a877345",
         "identification": false,
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "1ad7f3a6-d329-4260-b290-0a0c5b8cc047",
+          "tableId": "99f747ea-5075-480e-89e0-409ba92de7f0",
           "columnIds": [
-            "5c76dc92-040c-4668-b3c0-7fa39dc49609"
+            "6851bfab-8527-459c-beb0-dc8c0879ced2"
           ],
-          "x": 685,
-          "y": 807.25,
+          "x": 572.40185546875,
+          "y": 787.25,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "29fba0ca-37fe-4c93-be0c-64d53e66f7c2",
+          "columnIds": [
+            "592564e2-e72d-4ea8-9c9e-797b04285ced"
+          ],
+          "x": 720,
+          "y": 803.75,
+          "direction": "left"
+        },
+        "constraintName": "fk_laguage_code_to_language_value",
+        "visible": true
+      },
+      {
+        "id": "f37cdf0a-cc31-44d2-a6c0-42803c85d45c",
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "c1d46829-4b39-4cee-9137-b625933b28ca",
+          "columnIds": [
+            "13613cb8-34cf-4327-a928-2d7b51807159"
+          ],
+          "x": 856,
+          "y": 1024.875,
           "direction": "left"
         },
         "end": {
-          "tableId": "96e0ffeb-7444-4a77-b5e1-abb2bfcce8ae",
+          "tableId": "b16d4118-dfd6-4876-adff-48e4810b0647",
           "columnIds": [
-            "9dee31a5-9847-4aed-95e5-987b0491153d"
+            "0e63ba48-25f5-43db-a205-7e0f56dc0d08"
           ],
-          "x": 535.6640625,
-          "y": 806.25,
+          "x": 688.171875,
+          "y": 1251.875,
           "direction": "right"
         },
-        "constraintName": "fk_country_to_country_history",
+        "constraintName": "fk_common_code_to_common_code_key",
+        "visible": true
+      },
+      {
+        "id": "d37561c3-3e5a-4523-b7c6-0fe0fa06ed92",
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "b16d4118-dfd6-4876-adff-48e4810b0647",
+          "columnIds": [
+            "986510b8-b0d9-4369-bf7f-70203342b866"
+          ],
+          "x": 688.171875,
+          "y": 1186.625,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "6703b97e-9ade-4e51-a7a3-c7d82464a29b",
+          "columnIds": [
+            "8824e55f-6d5f-42eb-b047-abf5c4b6d2ef"
+          ],
+          "x": 813,
+          "y": 1215.25,
+          "direction": "left"
+        },
+        "constraintName": "fk_common_code_key_to_common_code_value",
+        "visible": true
+      },
+      {
+        "id": "ea9bbf9f-4c9c-4aff-b803-3b0cbd6dcc4a",
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "dcd90fda-cd27-4bf5-b5c1-59a054ab9918",
+          "columnIds": [
+            "577e285f-4d6a-498f-99ff-981998bac1e7"
+          ],
+          "x": 700.4990234375,
+          "y": 935,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "dcd90fda-cd27-4bf5-b5c1-59a054ab9918",
+          "columnIds": [
+            "9bd502f3-131a-4713-895f-a6ab8827289f"
+          ],
+          "x": 720.4990234375,
+          "y": 967.625,
+          "direction": "right"
+        },
+        "constraintName": "fk_common_code_scope_to_common_code_scope",
+        "visible": true
+      },
+      {
+        "id": "0f08c570-9ffe-4a2a-a065-2b4fec073ce4",
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "dcd90fda-cd27-4bf5-b5c1-59a054ab9918",
+          "columnIds": [
+            "577e285f-4d6a-498f-99ff-981998bac1e7"
+          ],
+          "x": 720.4990234375,
+          "y": 1032.875,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "c1d46829-4b39-4cee-9137-b625933b28ca",
+          "columnIds": [
+            "be54d5e5-57ff-4148-8c8d-75805c866857"
+          ],
+          "x": 856,
+          "y": 959.625,
+          "direction": "left"
+        },
+        "constraintName": "fk_common_code_scope_to_common_code",
         "visible": true
       }
     ]

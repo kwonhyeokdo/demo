@@ -1,6 +1,6 @@
 spring:
     datasource:
-        url: jdbc:mysql://localhost:3306/jpashop?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
+        url: jdbc:mysql://localhost:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
         driverClassName: com.mysql.cj.jdbc.Driver
         username: admin
         password: mg&=nc+i[it;TH,NV06D$2xs{
