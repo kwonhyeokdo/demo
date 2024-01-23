@@ -55,25 +55,26 @@ public class LanguageValue {
     @Column(name = "can_use", columnDefinition = "DEFAULT 'Y'")
     String canUse;
 
-    public LanguageValue(@NotNull LanguageKey key, @Size(max = 10) @NotNull LanguageCode languageCode,
-            @NotNull String value, @Size(max = 1) @NotNull String canUse) {
-        this.key = key;
-        this.languageCode = languageCode;
-        this.value = value;
-        this.canUse = canUse;
+    public static LanguageValue createInsertInstance(
+        @Size(max = 10) @NotNull LanguageCode languageCode,
+        @NotNull String value
+    ){
+        return LanguageValue.createInsertInstance(languageCode, value, "Y");
     }
 
     public static LanguageValue createInsertInstance(
-        @NotNull LanguageKey key,
         @Size(max = 10) @NotNull LanguageCode languageCode,
         @NotNull String value,
         @Size(max = 1) @NotNull String canUse
     ){
         LanguageValue result = new LanguageValue();
-        result.setKey(key);
         result.setLanguageCode(languageCode);
         result.setValue(value);
         result.setCanUse(canUse);
         return result;
+    }
+
+    public void changeLanguageKey(LanguageKey languageKey){
+        this.key = languageKey;
     }
 }

@@ -57,4 +57,9 @@ public class LanguageKey {
         languageKey.values = values;
         return languageKey;
     }
+
+    public void changeLanguageValues(List<LanguageValue> values){
+        this.values = values;
+        values.forEach(value -> value.changeLanguageKey(this));
+    }
 }
