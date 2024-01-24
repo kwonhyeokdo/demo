@@ -7,14 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import testing.demo.business.businessCustomJpa.EitherBooleanOrYnConverter;
 
 import java.util.List;
 
@@ -31,35 +28,34 @@ public class LanguageKey {
     @Column(name = "language_key_id")
     private Long id;
 
-    @Column(name = "language_key", unique = true)
+    @Column(name = "language_key", unique = true, nullable = false)
     @Size(max = 50)
-    @NotNull
     private String key;
 
-    @Column(name = "can_use")
-    @Size(max = 1)
-    @NotNull
-    @EitherBooleanOrYnConverter
-    private String canUse;
-
-    @OneToMany(mappedBy = "languageKey")
-    @NotNull
+    @OneToMany(mappedBy = "key")
     private List<LanguageValue> values = new ArrayList<>();
 
-    public static LanguageKey getInsertInstance(
-        @Size(max = 50) @NotNull String key,
-        @Size(max = 1) @NotNull String canUse,
-        @NotNull List<LanguageValue> values
-    ) {
-        LanguageKey languageKey = new LanguageKey();
-        languageKey.key = key;
-        languageKey.canUse = canUse;
-        languageKey.values = values;
-        return languageKey;
+    public static LanguageKey getInstance(
+        Long id,
+        String key,
+        List<LanguageValue> values
+    ){
+        LanguageKey result = new LanguageKey();
+        result.setId(id);
+        result.setKey(key);
+        result.setValues(values);
+
+        if(values != null && !values.isEmpty()){
+            result.changeValues(values);
+        }
+        
+        return result;
     }
 
-    public void changeLanguageValues(List<LanguageValue> values){
+    public void changeValues(List<LanguageValue> values){
         this.values = values;
-        values.forEach(value -> value.changeLanguageKey(this));
+        values.forEach(value -> {
+            value.changeKey(this);
+        });
     }
 }
