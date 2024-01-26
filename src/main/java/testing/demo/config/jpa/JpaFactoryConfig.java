@@ -1,4 +1,4 @@
-package testing.demo.config.customJpa;
+package testing.demo.config.jpa;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

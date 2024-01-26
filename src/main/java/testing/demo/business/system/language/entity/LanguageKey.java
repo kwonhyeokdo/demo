@@ -35,27 +35,11 @@ public class LanguageKey {
     @OneToMany(mappedBy = "key")
     private List<LanguageValue> values = new ArrayList<>();
 
-    public static LanguageKey getInstance(
-        Long id,
-        String key,
-        List<LanguageValue> values
-    ){
-        LanguageKey result = new LanguageKey();
-        result.setId(id);
-        result.setKey(key);
-        result.setValues(values);
-
-        if(values != null && !values.isEmpty()){
-            result.changeValues(values);
+    public LanguageKey(Long id, @Size(max = 50) String key, List<LanguageValue> values) {
+        this.setId(id);
+        this.setKey(key);
+        if(values != null){
+            this.setValues(values);
         }
-        
-        return result;
-    }
-
-    public void changeValues(List<LanguageValue> values){
-        this.values = values;
-        values.forEach(value -> {
-            value.changeKey(this);
-        });
     }
 }

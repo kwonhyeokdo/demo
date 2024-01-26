@@ -1,5 +1,8 @@
 package testing.demo.business.system.language.entity;
 
+import java.util.stream.IntStream;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -10,12 +13,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import testing.demo.business.system.config.LanguageCode;
+import testing.demo.business.system.language.code.LanguageCode;
 import jakarta.persistence.FetchType;
 
 @Entity
@@ -40,22 +42,32 @@ public class LanguageValue {
     @JoinColumn(name = "language_value", nullable = false)
     private String value;
 
-    public static LanguageValue getInstance(
+    public LanguageValue(
         Long id,
         LanguageKey key,
         LanguageCode languageCode,
         String value
     ){
-        LanguageValue result = new LanguageValue();
-        result.setId(id);
-        result.setKey(key);
-        result.setLanguageCode(languageCode);
-        result.setValue(value);
+        this.setId(id);
+        this.setKey(key);
+        this.setLanguageCode(languageCode);
+        this.setValue(value);
 
-        return result;
+        this.changeKey(key);
     }
 
     public void changeKey(LanguageKey key){
         this.key = key;
+        List<LanguageValue> values = key.getValues();
+        int index = IntStream.range(0, values.size())
+                   .filter(i -> values.get(i).getId() == key.getId())
+                   .findFirst()
+                   .orElse(-1);
+        
+        if(index == -1){
+            values.add(this);
+        }else{
+            values.set(index, this);
+        }
     }
 }
